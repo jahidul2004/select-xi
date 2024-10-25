@@ -12,7 +12,7 @@ function App() {
     return (
         <div>
             <Header addCoin={addCoin} coin={coin}></Header>
-            <Players></Players>
+            <Players coin={coin}></Players>
             <Footer></Footer>
         </div>
     );

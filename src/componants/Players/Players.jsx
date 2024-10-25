@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import Player from "./Player";
+import Selectedplayer from "./Selectedplayer";
+import PropTypes from "prop-types";
 
-const Players = () => {
+const Players = ({ coin }) => {
     const [players, setPlayers] = useState([]);
-    console.log(players);
 
     useEffect(() => {
         fetch("player.json")
@@ -21,6 +22,20 @@ const Players = () => {
         setSelectedArea(false);
     };
 
+    // Choose player button functionality
+
+    let [selectedPlayers, setSelectedPlayers] = useState([]);
+
+    const handleChoosePlayer = (player) => {
+        if (player.price > coin || selectedPlayers.length > 5) {
+            alert("You don't have enough money");
+            return;
+        } else {
+            setSelectedPlayers([...selectedPlayers, player]);
+            console.log("Length is:", selectedPlayers.length);
+        }
+    };
+
     return (
         <div className="pb-20">
             <div className="mt-5 flex justify-between items-center my-2">
@@ -30,12 +45,15 @@ const Players = () => {
                 <div className="flex gap-3 border p-2 rounded">
                     <button
                         onClick={handleAvailableBtn}
-                        className="btn bg-[#e6fd29]"
+                        className={`btn ${!selectedArea && "bg-[#e6fd29]"}`}
                     >
                         Available
                     </button>
-                    <button onClick={handleSelectBtn} className="btn">
-                        Selected
+                    <button
+                        onClick={handleSelectBtn}
+                        className={`btn ${selectedArea && "bg-[#e6fd29]"}`}
+                    >
+                        Selected{`(${selectedPlayers.length})`}
                     </button>
                 </div>
             </div>
@@ -47,14 +65,33 @@ const Players = () => {
                 }`}
             >
                 {players.map((player) => (
-                    <Player key={player.id} player={player}></Player>
+                    <Player
+                        handleChoosePlayer={handleChoosePlayer}
+                        key={player.id}
+                        player={player}
+                    ></Player>
                 ))}
             </div>
 
             {/* Selected Players Container */}
-            <div className="my-20"></div>
+            <div className={`mb-20 ${!selectedArea && "hidden"}`}>
+                {selectedPlayers.map((player) => {
+                    console.log("Player clicked:", player.name);
+                    console.log("Length is:", selectedPlayers.length);
+                    return (
+                        <Selectedplayer
+                            key={player.id}
+                            player={player}
+                        ></Selectedplayer>
+                    );
+                })}
+            </div>
         </div>
     );
+};
+
+Players.propTypes = {
+    coin: PropTypes.number.isRequired,
 };
 
 export default Players;

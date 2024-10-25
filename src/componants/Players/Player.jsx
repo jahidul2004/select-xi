@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
 
-const Player = ({ player }) => {
+const Player = ({ handleChoosePlayer, player }) => {
     const { name, image, country, role, batting_style, price } = player;
-    console.log(name);
 
     return (
         <div className="card bg-base-100 border p-4">
@@ -31,7 +30,9 @@ const Player = ({ player }) => {
                         </div>
                         <div className="flex justify-between items-center">
                             <h1>Price:{price}$</h1>
-                            <button className="border px-2 py-1 rounded-md cursor-pointer hover:bg-[#f1f2f2]">
+                            <button onClick={() =>{
+                                handleChoosePlayer(player);
+                            }} className="border px-2 py-1 rounded-md cursor-pointer hover:bg-[#f1f2f2]">
                                 Choose player
                             </button>
                         </div>
@@ -51,6 +52,7 @@ Player.propTypes = {
         batting_style: PropTypes.string.isRequired,
         price: PropTypes.number.isRequired,
     }).isRequired,
+    handleChoosePlayer: PropTypes.func.isRequired,
 };
 
 export default Player;
