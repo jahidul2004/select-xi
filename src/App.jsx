@@ -3,17 +3,28 @@ import Players from "./componants/Players/Players";
 import Footer from "./componants/Footer/Footer";
 import { useState } from "react";
 
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
+  const showToast = (text) => {
+    toast(text)
+  };
+
+
     let [coin, setCoin] = useState(0);
 
     const addCoin = () => {
-        setCoin(coin + 600000);
+        setCoin(coin + 6000000);
+        showToast("Free credit claimed successfully");
     };
     return (
         <div>
             <div className="w-[95%] md:container lg:container m-auto">
-                <Header addCoin={addCoin} coin={coin}></Header>
-                <Players coin={coin}></Players>
+                <Header showToast={showToast} addCoin={addCoin} coin={coin}></Header>
+                <Players showToast = {showToast} coin={coin}></Players>
+                <ToastContainer/>
             </div>
             <div>
                 <Footer></Footer>

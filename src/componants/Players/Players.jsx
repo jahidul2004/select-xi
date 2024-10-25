@@ -4,7 +4,7 @@ import Player from "./Player";
 import Selectedplayer from "./Selectedplayer";
 import PropTypes from "prop-types";
 
-const Players = ({ coin }) => {
+const Players = ({ coin, showToast }) => {
     const [players, setPlayers] = useState([]);
 
     useEffect(() => {
@@ -28,16 +28,16 @@ const Players = ({ coin }) => {
 
     const handleChoosePlayer = (player) => {
         if (player.price > coin) {
-            alert("You don't have enough money");
+            showToast("You don't have enough coin to buy this player.");
             return;
         } else if (selectedPlayers.length > 5) {
-            alert("You can't select more than 6 players");
+            showToast("You can't select more than 6 players.");
         } else if (selectedPlayers.some((p) => p.id === player.id)) {
-            alert("Player is already selected.");
+            showToast("You have already selected this player.");
             return;
         } else {
             setSelectedPlayers([...selectedPlayers, player]);
-            console.log("Length is:", selectedPlayers.length);
+            showToast("Player added successfully!!");
         }
     };
 
@@ -52,7 +52,9 @@ const Players = ({ coin }) => {
         <div className="pb-20">
             <div className="mt-5 flex justify-between items-center my-2">
                 <h1 className="text-3xl font-bold">
-                    {!selectedArea ? "Avilable Players" : "Selected Players"}
+                    {!selectedArea
+                        ? `Avilable Players`
+                        : `Selected Players(${selectedPlayers.length}/6)`}
                 </h1>
                 <div className="flex gap-3 border p-2 rounded">
                     <button
@@ -88,10 +90,9 @@ const Players = ({ coin }) => {
             {/* Selected Players Container */}
             <div className={`mb-20 ${!selectedArea && "hidden"}`}>
                 {selectedPlayers.map((player) => {
-                    console.log("Player clicked:", player.name);
-                    console.log("Length is:", selectedPlayers.length);
                     return (
                         <Selectedplayer
+                            showToast={showToast}
                             key={player.id}
                             player={player}
                             handleDeletePlayer={handleDeletePlayer}
@@ -111,6 +112,7 @@ const Players = ({ coin }) => {
 
 Players.propTypes = {
     coin: PropTypes.number.isRequired,
+    showToast: PropTypes.func.isRequired,
 };
 
 export default Players;
