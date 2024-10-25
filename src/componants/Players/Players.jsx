@@ -27,13 +27,25 @@ const Players = ({ coin }) => {
     let [selectedPlayers, setSelectedPlayers] = useState([]);
 
     const handleChoosePlayer = (player) => {
-        if (player.price > coin || selectedPlayers.length > 5) {
+        if (player.price > coin) {
             alert("You don't have enough money");
+            return;
+        } else if (selectedPlayers.length > 5) {
+            alert("You can't select more than 6 players");
+        } else if (selectedPlayers.some((p) => p.id === player.id)) {
+            alert("Player is already selected.");
             return;
         } else {
             setSelectedPlayers([...selectedPlayers, player]);
             console.log("Length is:", selectedPlayers.length);
         }
+    };
+
+    // Delete player functionality
+    const handleDeletePlayer = (playerId) => {
+        setSelectedPlayers((prevPlayers) =>
+            prevPlayers.filter((p) => p.id !== playerId)
+        );
     };
 
     return (
@@ -82,9 +94,16 @@ const Players = ({ coin }) => {
                         <Selectedplayer
                             key={player.id}
                             player={player}
+                            handleDeletePlayer={handleDeletePlayer}
                         ></Selectedplayer>
                     );
                 })}
+                <button
+                    onClick={handleAvailableBtn}
+                    className="btn bg-[#e6fd29]"
+                >
+                    Add More Player
+                </button>
             </div>
         </div>
     );

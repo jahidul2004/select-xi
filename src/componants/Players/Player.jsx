@@ -30,9 +30,12 @@ const Player = ({ handleChoosePlayer, player }) => {
                         </div>
                         <div className="flex justify-between items-center">
                             <h1>Price:{price}$</h1>
-                            <button onClick={() =>{
-                                handleChoosePlayer(player);
-                            }} className="border px-2 py-1 rounded-md cursor-pointer hover:bg-[#f1f2f2]">
+                            <button
+                                onClick={() => {
+                                    handleChoosePlayer(player);
+                                }}
+                                className="border px-2 py-1 rounded-md cursor-pointer hover:bg-[#f1f2f2]"
+                            >
                                 Choose player
                             </button>
                         </div>

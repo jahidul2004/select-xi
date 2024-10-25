@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
-
-const Selectedplayer = ({ player }) => {
+const Selectedplayer = ({ player, handleDeletePlayer }) => {
+    let playerId = player.id;
     return (
         <div className="border w-full rounded-lg p-2 my-2 flex justify-between items-center">
             <div className="flex  gap-3 items-center">
@@ -16,7 +16,12 @@ const Selectedplayer = ({ player }) => {
                 </div>
             </div>
             <div>
-                <i className="mr-4 cursor-pointer text-error fa-regular fa-trash-can"></i>
+                <i
+                    onClick={() => {
+                        handleDeletePlayer(playerId);
+                    }}
+                    className="mr-4 cursor-pointer text-error fa-regular fa-trash-can"
+                ></i>
             </div>
         </div>
     );
@@ -24,10 +29,12 @@ const Selectedplayer = ({ player }) => {
 
 Selectedplayer.propTypes = {
     player: PropTypes.shape({
+        id: PropTypes.number.isRequired,
         name: PropTypes.string.isRequired,
         image: PropTypes.string.isRequired,
         batting_style: PropTypes.string.isRequired,
     }).isRequired,
+    handleDeletePlayer: PropTypes.func.isRequired,
 };
 
 export default Selectedplayer;
