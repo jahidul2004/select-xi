@@ -11,9 +11,13 @@ function App() {
     };
     return (
         <div>
-            <Header addCoin={addCoin} coin={coin}></Header>
-            <Players coin={coin}></Players>
-            <Footer></Footer>
+            <div className="w-[95%] md:container lg:container m-auto">
+                <Header addCoin={addCoin} coin={coin}></Header>
+                <Players coin={coin}></Players>
+            </div>
+            <div>
+                <Footer></Footer>
+            </div>
         </div>
     );
 }
