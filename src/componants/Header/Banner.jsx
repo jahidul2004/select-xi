@@ -1,4 +1,6 @@
-const Banner = () => {
+import PropTypes from "prop-types";
+
+const Banner = ({addCoin}) => {
     return (
         <div className="bg-black rounded-xl">
             <div
@@ -23,7 +25,7 @@ const Banner = () => {
                         </h1>
                         <p className="mb-5">Beyond Boundaries Beyond Limits</p>
                         <div className="border border-[#e6fd29] p-1 w-max m-auto rounded-lg">
-                            <button className="btn bg-[#e6fd29] border-none">
+                            <button onClick={addCoin} className="btn bg-[#e6fd29] border-none">
                                 Claim Free Credit
                             </button>
                         </div>
@@ -32,6 +34,10 @@ const Banner = () => {
             </div>
         </div>
     );
+};
+
+Banner.propTypes = {
+    addCoin: PropTypes.func.isRequired,
 };
 
 export default Banner;
