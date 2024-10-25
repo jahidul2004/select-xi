@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "image": "https://i.ibb.co.com/z4RNcC7/download.jpg",
+        "name": "Virat Kohli",
+        "country": "India",
+        "role": "Batsman",
+        "batting_style": "Right-hand bat",
+        "price": 2000000
+    },
+    {
+        "id": 2,
+        "image": "https://i.ibb.co.com/z4RNcC7/download.jpg",
+        "name": "Steve Smith",
+        "country": "Australia",
+        "role": "Bowler",
+        "batting_style": "Right-hand bat",
+        "price": 1800000
+    },
+    {
+        "id": 3,
+        "image": "https://i.ibb.co.com/z4RNcC7/download.jpg",
+        "name": "Kane Williamson",
+        "country": "New Zealand",
+        "role": "All Rounder",
+        "batting_style": "Right-hand bat",
+        "price": 1700000
+    },
+    {
+        "id": 4,
+        "image": "https://i.ibb.co.com/z4RNcC7/download.jpg",
+        "name": "Joe Root",
+        "country": "England",
+        "role": "All Rounder",
+        "batting_style": "Right-hand bat",
+        "price": 1600000
+    },
+    {
+        "id": 5,
+        "image": "https://i.ibb.co.com/z4RNcC7/download.jpg",
+        "name": "Rohit Sharma",
+        "country": "India",
+        "role": "Batsman",
+        "batting_style": "Right-hand bat",
+        "price": 1500000
+    },
+    {
+        "id": 6,
+        "image": "https://i.ibb.co.com/z4RNcC7/download.jpg",
+        "name": "Ben Stokes",
+        "country": "England",
+        "role": "All-rounder",
+        "batting_style": "Left-hand bat",
+        "price": 1900000
+    },
+    {
+        "id": 7,
+        "image": "https://i.ibb.co.com/z4RNcC7/download.jpg",
+        "name": "Shakib Al Hasan",
+        "country": "Bangladesh",
+        "role": "All-rounder",
+        "batting_style": "Left-hand bat",
+        "price": 1600000
+    },
+    {
+        "id": 8,
+        "image": "https://i.ibb.co.com/z4RNcC7/download.jpg",
+        "name": "AB de Villiers",
+        "country": "South Africa",
+        "role": "Batsman",
+        "batting_style": "Right-hand bat",
+        "price": 2100000
+    },
+    {
+        "id": 9,
+        "image": "https://i.ibb.co.com/z4RNcC7/download.jpg",
+        "name": "Mitchell Starc",
+        "country": "Australia",
+        "role": "Bowler",
+        "batting_style": "Left-hand bat",
+        "price": 1400000
+    },
+    {
+        "id": 10,
+        "image": "https://i.ibb.co.com/z4RNcC7/download.jpg",
+        "name": "Jasprit Bumrah",
+        "country": "India",
+        "role": "Bowler",
+        "batting_style": "Right-hand bat",
+        "price": 1500000
+    },
+    {
+        "id": 11,
+        "image": "https://i.ibb.co.com/z4RNcC7/download.jpg",
+        "name": "Tawhid Ridoy",
+        "country": "Bangladesh",
+        "role": "Batsman",
+        "batting_style": "Right-hand bat",
+        "price": 1500000
+    },
+    {
+        "id": 12,
+        "image": "https://i.ibb.co.com/z4RNcC7/download.jpg",
+        "name": "Liton Kumar Das",
+        "country": "Bangladesh",
+        "role": "Batsman",
+        "batting_style": "Left-hand bat",
+        "price": 1500000
+    }
+]
