@@ -10,7 +10,10 @@ const Player = ({ player }) => {
                 <img className="w-full" src={image} alt="Shoes" />
             </figure>
             <div className="card-body p-0 mt-5">
-                <h2 className="card-title text-2xl font-bold">{name}</h2>
+                <h2 className="card-title text-xl font-bold">
+                    <i className="fa-solid fa-user"></i>
+                    {name}
+                </h2>
                 <div className="flex justify-between items-center">
                     <h2>
                         <i className="fa-regular fa-flag"></i> {country}
