@@ -4,17 +4,17 @@
 
 ## Technologies Used
 There are many technologies used to compleat this project like
-1.React JS
-2.Git,Github
-3.Netlify
-4.Tailwind
-5.Daisy UI and More.
+1.React JS <br>
+2.Git,Github<br>
+3.Netlify<br>
+4.Tailwind<br>
+5.Daisy UI and More.<br>
 
 ## 3 Key Features of this project
 
-1.Collecting Free Reward
-2.Adding Player To Selected List
-3.Remove Player From Selected List
+1.Collecting Free Reward <br>
+2.Adding Player To Selected List <br>
+3.Remove Player From Selected List <br>
 
 ## Live Link
 https://select-xi.netlify.app/
