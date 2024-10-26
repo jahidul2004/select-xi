@@ -4,7 +4,7 @@ const Footer = () => {
             <div className="mt-20">
                 <img
                     className="m-auto mb-5"
-                    src="https://i.ibb.co.com/xqxYnD6/banner-main.png"
+                    src="https://i.ibb.co.com/0Y2YXmH/logo-footer.png"
                     alt=""
                 />
             </div>
@@ -41,16 +41,16 @@ const Footer = () => {
                     </p>
                     <input
                         placeholder="Enter your Email"
-                        className="input rounded-r-none"
+                        className="input rounded-r-none text-black"
                         type="text"
                     />
-                    <button className="btn border-none rounded-l-none bg-[#edc78f]">
+                    <button className="btn border-none rounded-l-none bg-gradient-to-r from-[#dd84b5] to-[#f6cb69] text-white">
                         Subscribe
                     </button>
                 </div>
             </div>
-            <div className="text-center mt-5">
-                <small>@2024 Your Company All Rights Reserved.</small>
+            <div className="text-center mt-5 text-[#757474]">
+                <small>@2024 Select Your Best XI All Rights Reserved.</small>
             </div>
 
             {/* Absolute Card */}
@@ -62,13 +62,13 @@ const Footer = () => {
                     <p className="text-[#000000bd] my-2">
                         Get the latest updates and news right in your inbox!
                     </p>
-                    <div className="flex flex-col md:flex-row lg:flex-row gap-2 justify-center">
+                    <div className="flex flex-col md:flex-row lg:flex-row gap-2 justify-center items-center">
                         <input
                             type="text"
                             placeholder="Enter Your Email"
-                            className="input"
+                            className="input text-black"
                         />
-                        <button className="btn bg-gradient-to-t from-[#dd84b5] to-[#f6cb69] border-none">
+                        <button className="btn bg-gradient-to-t from-[#dd84b5] to-[#f6cb69] border-none text-white">
                             Subscribe
                         </button>
                     </div>

@@ -15,12 +15,13 @@ const Player = ({ handleChoosePlayer, player }) => {
                 </h2>
                 <div className="flex justify-between items-center">
                     <h2>
-                        <i className="fa-regular fa-flag"></i> {country}
+                        <i className="fa-solid fa-flag"></i> {country}
                     </h2>
                     <h2 className="bg-[#f1f2f2] px-2 py-1 rounded-lg">
                         {role}
                     </h2>
                 </div>
+                <hr />
                 <div>
                     <h1 className="font-bold">Rating</h1>
                     <div>

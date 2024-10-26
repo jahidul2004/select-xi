@@ -4,7 +4,7 @@ import Player from "./Player";
 import Selectedplayer from "./Selectedplayer";
 import PropTypes from "prop-types";
 
-const Players = ({ coin, showToast }) => {
+const Players = ({ coin, showToast, removeCoin }) => {
     const [players, setPlayers] = useState([]);
 
     useEffect(() => {
@@ -37,6 +37,7 @@ const Players = ({ coin, showToast }) => {
             return;
         } else {
             setSelectedPlayers([...selectedPlayers, player]);
+            removeCoin(player.price);
             showToast("Player added successfully!!");
         }
     };
@@ -113,6 +114,7 @@ const Players = ({ coin, showToast }) => {
 Players.propTypes = {
     coin: PropTypes.number.isRequired,
     showToast: PropTypes.func.isRequired,
+    removeCoin: PropTypes.func.isRequired,
 };
 
 export default Players;

@@ -8,12 +8,12 @@
 
 This project leverages a variety of technologies for performance and style:
 
-- **React JS**: For a dynamic and responsive user interface
-- **Git & GitHub**: Version control and collaborative development
-- **Netlify**: Easy and reliable frontend deployment
-- **Tailwind CSS**: Streamlined styling for a modern, responsive layout
-- **Daisy UI**: Pre-built components for seamless design
-- **& More**!
+-   **React JS**: For a dynamic and responsive user interface
+-   **Git & GitHub**: Version control and collaborative development
+-   **Netlify**: Easy and reliable frontend deployment
+-   **Tailwind CSS**: Streamlined styling for a modern, responsive layout
+-   **Daisy UI**: Pre-built components for seamless design
+-   **& More**!
 
 ---
 
@@ -31,4 +31,4 @@ Check out the live application here: [Select Your Team With Best XI](https://sel
 
 ---
 
-Enjoy building your dream team with *Best XI*! 🏆
+Enjoy building your dream team with _Best XI_! 🏆
