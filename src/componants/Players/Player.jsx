@@ -6,7 +6,7 @@ const Player = ({ handleChoosePlayer, player }) => {
     return (
         <div className="card bg-base-100 border p-4">
             <figure>
-                <img className="w-full" src={image} alt="Shoes" />
+                <img className="w-full h-[250px]" src={image} alt="Shoes" />
             </figure>
             <div className="card-body p-0 mt-5">
                 <h2 className="card-title text-xl font-bold">
