@@ -1,3 +1,6 @@
+![Screenshot](https://i.ibb.co.com/0RbDMdQ4/Screenshot-60.png)
+
+
 # Select Your Team With Best XI 🏏
 
 **"Select Your Team With Best XI"** is an engaging, interactive app that allows users to create their ultimate sports team lineup! Choose your favorite players based on their positions, skills, and attributes to build the best team. Plus, collect free rewards to enhance your experience!
