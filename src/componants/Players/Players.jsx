@@ -57,7 +57,7 @@ const Players = ({ coin, showToast, removeCoin }) => {
                         ? `Avilable Players`
                         : `Selected Players(${selectedPlayers.length}/6)`}
                 </h1>
-                <div className="flex gap-3 border p-2 rounded">
+                <div className="flex gap-3 border rounded-lg p-2 rounded">
                     <button
                         onClick={handleAvailableBtn}
                         className={`btn ${!selectedArea && "bg-[#e6fd29]"}`}
