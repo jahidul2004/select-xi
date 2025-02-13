@@ -54,10 +54,10 @@ const Players = ({ coin, showToast, removeCoin }) => {
             <div className="mt-5 flex justify-between items-center my-2">
                 <h1 className="text-3xl font-bold">
                     {!selectedArea
-                        ? `Avilable Players`
+                        ? `Available Players`
                         : `Selected Players(${selectedPlayers.length}/6)`}
                 </h1>
-                <div className="flex gap-3 border rounded-lg p-2 rounded">
+                <div className="flex gap-3 border rounded-lg p-2">
                     <button
                         onClick={handleAvailableBtn}
                         className={`btn ${!selectedArea && "bg-[#e6fd29]"}`}
